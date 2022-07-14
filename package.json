@@ -1,0 +1,34 @@
+{
+  "name": "knowledgeworker-embedded-asset-api-ui",
+  "version": "1.0.0",
+  "author": "chemmedia AG",
+  "description": "A javascript library to support native Knowledgeworker Create UI elements in rich content packages.",
+  "keywords": [
+    "knowledgeworker"
+  ],
+  "scripts": {
+    "clean": "rimraf lib/",
+    "copy-fonts": "copyfiles -u 1 src/*.woff2 lib/",
+    "build": "yarn clean && tsc && yarn copy-fonts",
+    "prepare": "yarn run build"
+  },
+  "homepage": "https://knowledgeworker.com",
+  "bugs": "https://github.com/chemmedia/knowledgeworker-embedded-asset-api-ui/issues",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chemmedia/knowledgeworker-embedded-asset-api-ui.git"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^17.0.36",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {}
+}
