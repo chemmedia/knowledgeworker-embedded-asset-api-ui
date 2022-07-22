@@ -48,9 +48,9 @@ kw-button-secondary - <button class="kw-button-secondary">...</button>
 
 Interactive Elements additionally support the disabled Attribute to show they are currently not available.
 ```html
-kw-link - <a class="kw-link" disbaled>...</a>
-kw-button-primary - <button class="kw-button-primary" disbaled>...</button>
-kw-button-secondary - <button class="kw-button-secondary" disbaled>...</button>
+kw-link - <a class="kw-link" disabled>...</a>
+kw-button-primary - <button class="kw-button-primary" disabled>...</button>
+kw-button-secondary - <button class="kw-button-secondary" disabled>...</button>
 ```
 
 ### Javascript Access
