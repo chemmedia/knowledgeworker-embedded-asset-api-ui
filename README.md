@@ -1,15 +1,15 @@
 # Knowledgeworker Create Embedded Asset API - UI
 
-A javascript library to support native [Knowledgeworker Create](https://www.knowledgeworker.com/knowledgeworker-create/?utm_source=code&utm_campaign=embedded-asset-api) UI elements in rich content packages.
+A Javascript library to support native [Knowledgeworker Create](https://www.knowledgeworker.com/knowledgeworker-create/?utm_source=code&utm_campaign=embedded-asset-api) UI elements in rich content packages.
 
 ## Usage
 
-This library is integrated in [knowledgeworker-embedded-asset-api](https://github.com/chemmedia/knowledgeworker-embedded-asset-api) by default and provides CSS-Variables, CSS-Classes and Javascript access for all important design params.\
-For development and review there is a fallback to default colors, fonts, etc. if you start your asset outside Knowledgeworker Create.
+This library is integrated into [knowledgeworker-embedded-asset-api](https://github.com/chemmedia/knowledgeworker-embedded-asset-api) by default and provides CSS variables, CSS classes and Javascript access for all important design params.\
+For development and review purposes, there is a fallback to default colors, fonts, etc. if you start your asset outside Knowledgeworker Create.
 
-### CSS-Variables
-If you use the [knowledgeworker-embedded-asset-api](https://github.com/chemmedia/knowledgeworker-embedded-asset-api), CSS-Variables are automatically added to your asset. They also keep up to date if the environment in Knowledgeworker Create changes, e.g. the background color changes.
-See the list of available variables below, use them as normal in your CSS, e.g. `color: var(--kw-text-color);`.
+### CSS Variables
+If you use the [knowledgeworker-embedded-asset-api](https://github.com/chemmedia/knowledgeworker-embedded-asset-api), CSS variables are automatically added to your asset. They also stay up to date if the environment in Knowledgeworker Create changes, e.g. the background color changes.
+See the list of available variables below, use them in your CSS as usual, e.g. `color: var(--kw-text-color);`.
 
 ```
 --kw-text-color
@@ -30,8 +30,8 @@ See the list of available variables below, use them as normal in your CSS, e.g. 
 --kw-button-border-radius
 ```
 
-### CSS-Classes
-If you use the [knowledgeworker-embedded-asset-api](https://github.com/chemmedia/knowledgeworker-embedded-asset-api), CSS-Classes are automatically added to your asset. They also keep up to date if the environment in Knowledgeworker Create changes, e.g. the background color changes.
+### CSS Classes
+If you use the [knowledgeworker-embedded-asset-api](https://github.com/chemmedia/knowledgeworker-embedded-asset-api), CSS classes are automatically added to your asset. They also stay up to date if the environment in Knowledgeworker Create changes, e.g. the background color changes.
 See the list of available classes below, use them as normal in your HTML.
 
 ```html
@@ -46,7 +46,7 @@ kw-button-primary - <button class="kw-button-primary">...</button>
 kw-button-secondary - <button class="kw-button-secondary">...</button>
 ```
 
-Interactive Elements additionally support the disabled Attribute to show they are currently not available.
+Interactive Elements additionally support the disabled attribute to show they are currently not available.
 ```html
 kw-link - <a class="kw-link" disabled>...</a>
 kw-button-primary - <button class="kw-button-primary" disabled>...</button>
@@ -55,7 +55,7 @@ kw-button-secondary - <button class="kw-button-secondary" disabled>...</button>
 
 ### Javascript Access
 If you use the [knowledgeworker-embedded-asset-api](https://github.com/chemmedia/knowledgeworker-embedded-asset-api) you can listen to the `onInitialize` and on `onDesignChanged` events to get an object with all available design params.
-Initial design is provided via `onInitialize`, `onDesignChanged` is used if design may change later.
+Initial design is provided via `onInitialize`; `onDesignChanged` is used in case the design changes later on.
 
 Types:
 ```TypeScript
