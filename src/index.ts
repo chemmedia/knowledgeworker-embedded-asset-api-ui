@@ -1,3 +1,6 @@
+import hindLight from './hind-light-webfont.woff2';
+import hindMedium from './hind-medium-webfont.woff2';
+
 export type FontType = 'woff' | 'woff2' | 'truetype' | 'opentype' | 'embedded-opentype' | 'svg';
 
 export interface FontFaces {
@@ -51,7 +54,7 @@ export const defaultDesign: Design = {
         {
             name: 'Hind',
             sources: [{
-                src: require('./hind-light-webfont.woff2'),
+                src: hindLight,
                 format: 'woff2',
             }],
             fontWeight: 'normal',
@@ -60,7 +63,7 @@ export const defaultDesign: Design = {
         {
             name: 'Hind',
             sources: [{
-                src: require('./hind-medium-webfont.woff2'),
+                src: hindMedium,
                 format: 'woff2',
             }],
             fontWeight: 'bold',
