@@ -1,6 +1,6 @@
 {
   "name": "knowledgeworker-embedded-asset-api-ui",
-  "version": "2.1.0",
+  "version": "2.1.0-rc.0",
   "author": "chemmedia AG",
   "description": "A javascript library to support native Knowledgeworker Create UI elements in rich content packages.",
   "keywords": [
