@@ -23,6 +23,7 @@ See the list of available variables below, use them in your CSS as usual, e.g. `
 --kw-feedback-partial-positive-color
 --kw-feedback-negative-color
 --kw-feedback-solution-color
+--kw-focus-color
 --kw-text-font-size
 --kw-text-font-family
 --kw-headline-font-family
@@ -81,6 +82,7 @@ export interface Design {
     feedbackPartialPositiveColor: string;
     feedbackNegativeColor: string;
     feedbackSolutionColor: string;
+    focusColor: string;
     textFontSize: string;
     textFontFamily: string;
     headlineFontFamily: string;
@@ -105,12 +107,12 @@ onDesignChanged((design) => {
 
 ## Versioning
 
-We use the [SemVer](http://semver.org/) versioning system. For the available versions, please see the tags on this 
+We use the [SemVer](http://semver.org/) versioning system. For the available versions, please see the tags on this
 repository.
 
 ## Authors
 
- - Martin Kutter - [chemmedia AG](https://www.chemmedia.de/)
+- Martin Kutter - [chemmedia AG](https://www.chemmedia.de/)
 
 ## Licence
 

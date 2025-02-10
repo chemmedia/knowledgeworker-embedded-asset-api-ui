@@ -25,6 +25,7 @@ export interface Design {
     feedbackPartialPositiveColor: string;
     feedbackNegativeColor: string;
     feedbackSolutionColor: string;
+    focusColor: string;
     textFontSize: string;
     textFontFamily: string;
     headlineFontFamily: string;
@@ -45,6 +46,7 @@ export const defaultDesign: Design = {
     feedbackPartialPositiveColor: 'rgb(135, 135, 135)',
     feedbackNegativeColor: '#c80000',
     feedbackSolutionColor: '#ebaf0b',
+    focusColor: '#E8398E',
     textFontSize: '18px',
     textFontFamily: 'Hind, Arial, sans-serif',
     headlineFontFamily: 'Hind, Arial, sans-serif',
@@ -95,6 +97,7 @@ export const getCssVariables = ({
     feedbackPartialPositiveColor,
     feedbackNegativeColor,
     feedbackSolutionColor,
+    focusColor,
     textFontSize,
     textFontFamily,
     headlineFontFamily,
@@ -113,6 +116,7 @@ export const getCssVariables = ({
         --kw-feedback-partial-positive-color: ${feedbackPartialPositiveColor};
         --kw-feedback-negative-color: ${feedbackNegativeColor};
         --kw-feedback-solution-color: ${feedbackSolutionColor};
+        --kw-focus-color: ${focusColor};
         --kw-text-font-size: ${textFontSize};
         --kw-text-font-family: ${textFontFamily};
         --kw-headline-font-family: ${headlineFontFamily};
@@ -135,6 +139,11 @@ export const getStyles = (design: Design) => minifyStyleString(`
         font-weight: 300;
         line-height: 1.6em;
         color: var(--kw-text-color);
+    }
+    
+    .kw-link:focus-visible {
+      outline-offset: 2px;
+      outline: 2px solid var(--kw-focus-color);
     }
     
     .kw-paragraph a,
@@ -199,7 +208,8 @@ export const getStyles = (design: Design) => minifyStyleString(`
         border: none;
         text-decoration: none;
         display: inline-block;
-        padding: 7px 20px;
+        border: 1.5px solid var(--kw-action-color);
+        padding: 5.5px 18.5px;
         box-shadow: 0 0 2px rgba(0, 0, 0, .3);
         cursor: pointer;
         transition: box-shadow 100ms ease-out;
@@ -207,40 +217,42 @@ export const getStyles = (design: Design) => minifyStyleString(`
         border-radius: var(--kw-button-border-radius);
     }
     
+    .kw-button-primary:not([disabled]):focus-visible,
+    .kw-button-secondary:not([disabled]):focus-visible {
+      outline-offset: 2px;
+      outline: 2px solid var(--kw-focus-color);
+    }
+    
     .kw-button-primary:not([disabled]):hover {
         background: var(--kw-action-hover-color);
+        border-color: var(--kw-action-hover-color);
         color: var(--kw-action-text-color);
         box-shadow: 0 0 5px rgba(0, 0, 0, .6);
     }
 
     .kw-button-primary[disabled] {
         background: var(--kw-action-disabled-color);
+        border-color: var(--kw-action-disabled-color);
         cursor: not-allowed;
         box-shadow: none;
-    }
-
-    .kw-button-primary:focus {
-        outline: 2px solid var(--kw-action-hover-color);
     }
     
     .kw-button-secondary {
         background-color: transparent;
         color: var(--kw-action-color);
         box-shadow: none;
-        outline: 1.5px solid var(--kw-action-color);
-        outline-offset: -1px;
     }
 
     .kw-button-secondary[disabled] {
         color: var(--kw-action-disabled-color);
+        border-color: var(--kw-action-disabled-color);
         background-color: transparent;
         cursor: not-allowed;
-        outline-color: var(--kw-action-disabled-color);
     }
 
     .kw-button-secondary:not([disabled]):hover {
         color: var(--kw-action-hover-color);
-        outline-color: var(--kw-action-hover-color);
+        border-color: var(--kw-action-hover-color);
         background: transparent !important;
         box-shadow: 0 0 5px rgba(0, 0, 0, .4);
     }
